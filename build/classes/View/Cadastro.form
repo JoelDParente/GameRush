@@ -79,7 +79,11 @@
                                   <Component id="mensagemErroEmail" max="32767" attributes="0"/>
                               </Group>
                               <Component id="inputEmail" alignment="0" max="32767" attributes="0"/>
-                              <Component id="labelUsername" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="labelUsername" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="msnUsername" max="32767" attributes="0"/>
+                              </Group>
                               <Group type="102" alignment="0" attributes="0">
                                   <Component id="labelCpf" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
@@ -95,7 +99,8 @@
                               <Component id="inputConfirmSenha" max="32767" attributes="0"/>
                               <Group type="102" attributes="0">
                                   <Component id="labelSenha" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="msnSenha" max="32767" attributes="0"/>
                               </Group>
                               <Group type="102" attributes="0">
                                   <Component id="labelConfirmSenha" min="-2" max="-2" attributes="0"/>
@@ -109,12 +114,16 @@
                               </Group>
                           </Group>
                       </Group>
-                      <Component id="labelNome" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Component id="labelNome" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="msnNomeCompleto" max="32767" attributes="0"/>
+                      </Group>
                       <Component id="inputNomeCompleto" alignment="0" min="-2" pref="580" max="-2" attributes="0"/>
                       <Group type="102" alignment="0" attributes="0">
                           <Component id="Pergunta" min="-2" pref="133" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="linkLogin" min="-2" max="-2" attributes="0"/>
+                          <Component id="linkLogin" min="-2" pref="40" max="-2" attributes="0"/>
                       </Group>
                       <Component id="cadastre" alignment="0" min="-2" pref="280" max="-2" attributes="0"/>
                   </Group>
@@ -133,13 +142,19 @@
                       <Component id="linkLogin" alignment="3" pref="29" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace max="32767" attributes="0"/>
-                  <Component id="labelNome" min="-2" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="labelNome" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="msnNomeCompleto" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="inputNomeCompleto" min="-2" pref="40" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
-                          <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-                          <Component id="labelUsername" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="1" attributes="0">
+                              <Component id="labelUsername" min="-2" max="-2" attributes="0"/>
+                              <Component id="msnUsername" min="-2" max="-2" attributes="0"/>
+                          </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="inputUsername" min="-2" pref="40" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
@@ -166,7 +181,10 @@
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="inputTelefone" min="-2" pref="40" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="labelSenha" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="labelSenha" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="msnSenha" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="inputSenha" min="-2" pref="40" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
@@ -182,7 +200,7 @@
                           <Component id="jSeparator1" min="-2" pref="198" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace pref="41" max="32767" attributes="0"/>
+                  <EmptySpace pref="33" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
                       <Component id="btnCadastrar" pref="40" max="32767" attributes="0"/>
                       <Component id="btnVoltar" max="32767" attributes="0"/>
@@ -237,6 +255,13 @@
             <Property name="text" type="java.lang.String" value="Nome Completo"/>
           </Properties>
         </Component>
+        <Component class="javax.swing.JLabel" name="msnNomeCompleto">
+          <Properties>
+            <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[90, 20]"/>
+            </Property>
+          </Properties>
+        </Component>
         <Component class="javax.swing.JSeparator" name="jSeparator1">
           <Properties>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
@@ -254,6 +279,13 @@
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Nome de Usu&#xe1;rio"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="msnUsername">
+          <Properties>
+            <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[90, 20]"/>
+            </Property>
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="inputUsername">
@@ -278,6 +310,9 @@
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="inputUsernameFocusLost"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="labelEmail">
           <Properties>
@@ -384,6 +419,9 @@
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="inputNomeCompletoFocusLost"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="labelTelefone">
           <Properties>
@@ -433,6 +471,13 @@
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Senha"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="msnSenha">
+          <Properties>
+            <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[90, 20]"/>
+            </Property>
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="inputSenha">

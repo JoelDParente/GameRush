@@ -34,8 +34,10 @@ public class Cadastro extends javax.swing.JFrame {
         Pergunta = new javax.swing.JLabel();
         linkLogin = new javax.swing.JLabel();
         labelNome = new javax.swing.JLabel();
+        msnNomeCompleto = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
         labelUsername = new javax.swing.JLabel();
+        msnUsername = new javax.swing.JLabel();
         inputUsername = new javax.swing.JTextField();
         labelEmail = new javax.swing.JLabel();
         mensagemErroEmail = new javax.swing.JLabel();
@@ -48,6 +50,7 @@ public class Cadastro extends javax.swing.JFrame {
         mensagemErroTelefone = new javax.swing.JLabel();
         inputTelefone = new javax.swing.JTextField();
         labelSenha = new javax.swing.JLabel();
+        msnSenha = new javax.swing.JLabel();
         inputSenha = new javax.swing.JTextField();
         labelConfirmSenha = new javax.swing.JLabel();
         mensagemErroConfirmSenha = new javax.swing.JLabel();
@@ -91,6 +94,8 @@ public class Cadastro extends javax.swing.JFrame {
         labelNome.setForeground(new java.awt.Color(255, 255, 255));
         labelNome.setText("Nome Completo");
 
+        msnNomeCompleto.setPreferredSize(new java.awt.Dimension(90, 20));
+
         jSeparator1.setForeground(new java.awt.Color(48, 54, 61));
         jSeparator1.setOrientation(javax.swing.SwingConstants.VERTICAL);
         jSeparator1.setPreferredSize(new java.awt.Dimension(10, 210));
@@ -98,11 +103,18 @@ public class Cadastro extends javax.swing.JFrame {
         labelUsername.setForeground(new java.awt.Color(255, 255, 255));
         labelUsername.setText("Nome de Usuário");
 
+        msnUsername.setPreferredSize(new java.awt.Dimension(90, 20));
+
         inputUsername.setBackground(new java.awt.Color(48, 54, 61));
         inputUsername.setForeground(new java.awt.Color(255, 255, 255));
         inputUsername.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(83, 65, 65), 1, true));
         inputUsername.setCaretColor(new java.awt.Color(255, 255, 255));
         inputUsername.setDisabledTextColor(new java.awt.Color(255, 255, 255));
+        inputUsername.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                inputUsernameFocusLost(evt);
+            }
+        });
 
         labelEmail.setForeground(new java.awt.Color(255, 255, 255));
         labelEmail.setText("E-mail");
@@ -146,6 +158,11 @@ public class Cadastro extends javax.swing.JFrame {
         inputNomeCompleto.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(83, 65, 65), 1, true));
         inputNomeCompleto.setCaretColor(new java.awt.Color(255, 255, 255));
         inputNomeCompleto.setDisabledTextColor(new java.awt.Color(255, 255, 255));
+        inputNomeCompleto.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                inputNomeCompletoFocusLost(evt);
+            }
+        });
 
         labelTelefone.setForeground(new java.awt.Color(255, 255, 255));
         labelTelefone.setText("Telefone");
@@ -166,6 +183,8 @@ public class Cadastro extends javax.swing.JFrame {
 
         labelSenha.setForeground(new java.awt.Color(255, 255, 255));
         labelSenha.setText("Senha");
+
+        msnSenha.setPreferredSize(new java.awt.Dimension(90, 20));
 
         inputSenha.setBackground(new java.awt.Color(48, 54, 61));
         inputSenha.setForeground(new java.awt.Color(255, 255, 255));
@@ -226,7 +245,10 @@ public class Cadastro extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(mensagemErroEmail, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                             .addComponent(inputEmail)
-                            .addComponent(labelUsername)
+                            .addGroup(containerLayout.createSequentialGroup()
+                                .addComponent(labelUsername)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(msnUsername, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                             .addGroup(containerLayout.createSequentialGroup()
                                 .addComponent(labelCpf)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -240,7 +262,8 @@ public class Cadastro extends javax.swing.JFrame {
                             .addComponent(inputConfirmSenha)
                             .addGroup(containerLayout.createSequentialGroup()
                                 .addComponent(labelSenha)
-                                .addGap(0, 0, Short.MAX_VALUE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(msnSenha, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                             .addGroup(containerLayout.createSequentialGroup()
                                 .addComponent(labelConfirmSenha)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -249,12 +272,15 @@ public class Cadastro extends javax.swing.JFrame {
                                 .addComponent(labelTelefone)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(mensagemErroTelefone, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                    .addComponent(labelNome, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, containerLayout.createSequentialGroup()
+                        .addComponent(labelNome)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(msnNomeCompleto, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addComponent(inputNomeCompleto, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 580, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, containerLayout.createSequentialGroup()
                         .addComponent(Pergunta, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(linkLogin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(linkLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(cadastre, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(22, Short.MAX_VALUE))
         );
@@ -268,13 +294,17 @@ public class Cadastro extends javax.swing.JFrame {
                     .addComponent(Pergunta, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(linkLogin, javax.swing.GroupLayout.DEFAULT_SIZE, 29, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(labelNome)
+                .addGroup(containerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(labelNome)
+                    .addComponent(msnNomeCompleto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(inputNomeCompleto, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(containerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(containerLayout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addComponent(labelUsername)
+                        .addGap(14, 14, 14)
+                        .addGroup(containerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(labelUsername)
+                            .addComponent(msnUsername, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(inputUsername, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -297,7 +327,9 @@ public class Cadastro extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(inputTelefone, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(labelSenha)
+                        .addGroup(containerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(labelSenha)
+                            .addComponent(msnSenha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(inputSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -309,7 +341,7 @@ public class Cadastro extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, containerLayout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 41, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 33, Short.MAX_VALUE)
                 .addGroup(containerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(btnCadastrar, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
                     .addComponent(btnVoltar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -383,7 +415,7 @@ public class Cadastro extends javax.swing.JFrame {
 
     //Métodos de evento
     private void btnCadastrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCadastrarMouseClicked
-
+        
     }//GEN-LAST:event_btnCadastrarMouseClicked
 
     private void linkLoginMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_linkLoginMouseClicked
@@ -396,37 +428,40 @@ public class Cadastro extends javax.swing.JFrame {
         String email = inputEmail.getText();
         if (email.isEmpty()) {
             mensagemErroEmail.setText("Campo não preenchido");
-            mensagemErroEmail.setForeground(Color.red);
+            mensagemErroEmail.setForeground(Color.orange);
         } else if (emailValido(email)) {
-            mensagemErroEmail.setText("Email válido");
-            mensagemErroEmail.setForeground(Color.WHITE);
+            mensagemErroEmail.setText("Válido");
+            mensagemErroEmail.setForeground(Color.green);
         } else {
             mensagemErroEmail.setText("Email inválido");
             mensagemErroEmail.setForeground(Color.red);
-            inputEmail.setBackground(Color.red);
         }
     }//GEN-LAST:event_inputEmailFocusLost
 
-
     private void inputCpfFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_inputCpfFocusLost
         String cpf = inputCpf.getText();
-        if (!(cpfFormatoValido(cpf))) {
+        if (cpf.isEmpty()) {
+            mensagemErroCPF.setText("Preencha o campo");
+            mensagemErroCPF.setForeground(Color.orange);
+        } else if(cpfFormatoValido(cpf)) {
+            mensagemErroCPF.setText("Válido");
+            mensagemErroCPF.setForeground(Color.green);
+        } else{
             mensagemErroCPF.setText("CPF inválido");
             mensagemErroCPF.setForeground(Color.red);
-            inputCpf.setBackground(Color.red);
-        } else {
-            mensagemErroCPF.setText("CPF válido");
-            mensagemErroCPF.setForeground(Color.GREEN);
         }
     }//GEN-LAST:event_inputCpfFocusLost
 
     private void inputTelefoneFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_inputTelefoneFocusLost
          String telefone = inputTelefone.getText();
-        if (telefoneValido(telefone)) {
-            mensagemErroTelefone.setText("Telefone válido");
+        if (telefone.isEmpty()) {
+            mensagemErroTelefone.setText("Preencha o campo");
+            mensagemErroTelefone.setForeground(Color.orange);
+        } else if(telefoneValido(telefone)) {
+            mensagemErroTelefone.setText("Válido");
             mensagemErroTelefone.setForeground(Color.green);
-        } else {
-            mensagemErroTelefone.setText("Telefone inválido");
+        } else{
+            mensagemErroTelefone.setText("telefone inválido");
             mensagemErroTelefone.setForeground(Color.red);
         }
     }//GEN-LAST:event_inputTelefoneFocusLost
@@ -434,14 +469,31 @@ public class Cadastro extends javax.swing.JFrame {
     private void inputConfirmSenhaFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_inputConfirmSenhaFocusLost
         String senha = inputSenha.getText();
         String confirmSenha = inputConfirmSenha.getText();
-        if (senha.equals(confirmSenha)) {
-            mensagemErroConfirmSenha.setText("Senha confirmada");
+        if (senha.isEmpty()) {
+            mensagemErroConfirmSenha.setText("Preencha o campo");
+            mensagemErroConfirmSenha.setForeground(Color.orange);
+        } else if(senha.equals(confirmSenha)) {
+            mensagemErroConfirmSenha.setText("Válido");
             mensagemErroConfirmSenha.setForeground(Color.green);
-        } else {
-            mensagemErroConfirmSenha.setText("Senha incoreta");
+        } else{
+            mensagemErroConfirmSenha.setText("Senha inválida");
             mensagemErroConfirmSenha.setForeground(Color.red);
         }
     }//GEN-LAST:event_inputConfirmSenhaFocusLost
+
+    private void inputNomeCompletoFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_inputNomeCompletoFocusLost
+        String nome = inputNomeCompleto.getText();
+        if (nome.isEmpty()) {
+            msnNomeCompleto.setText("Preencha o campo");
+            msnNomeCompleto.setForeground(Color.orange);
+        } else{
+            msnNomeCompleto.setText(" ");
+        }
+    }//GEN-LAST:event_inputNomeCompletoFocusLost
+
+    private void inputUsernameFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_inputUsernameFocusLost
+        // TODO add your handling code here:
+    }//GEN-LAST:event_inputUsernameFocusLost
     
     
     
@@ -510,5 +562,8 @@ public class Cadastro extends javax.swing.JFrame {
     private javax.swing.JLabel mensagemErroConfirmSenha;
     private javax.swing.JLabel mensagemErroEmail;
     private javax.swing.JLabel mensagemErroTelefone;
+    private javax.swing.JLabel msnNomeCompleto;
+    private javax.swing.JLabel msnSenha;
+    private javax.swing.JLabel msnUsername;
     // End of variables declaration//GEN-END:variables
 }
