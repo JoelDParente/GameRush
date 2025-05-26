@@ -9,5 +9,5 @@ package Model;
  * @author jo3ld
  */
 public class Produtora {
-    private String estudio;
+    private String produtora;
 }
