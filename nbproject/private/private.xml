@@ -5,10 +5,11 @@
         <group>
             <file>file:/C:/Users/LABINFO-PC13/Documents/NetBeansProjects/GameRush/src/Controller/ControlUsuario.java</file>
             <file>file:/C:/Users/LABINFO-PC13/Documents/NetBeansProjects/GameRush/src/ModelDAO/UsuarioDAO.java</file>
-            <file>file:/C:/Users/LABINFO-PC13/Documents/NetBeansProjects/GameRush/src/ModelDAO/JogosDAO.java</file>
-            <file>file:/C:/Users/LABINFO-PC13/Documents/NetBeansProjects/GameRush/src/Controller/ControlCompra.java</file>
-            <file>file:/C:/Users/LABINFO-PC13/Documents/NetBeansProjects/GameRush/src/Controller/ControlJogo.java</file>
+            <file>file:/C:/Users/LABINFO-PC13/Documents/NetBeansProjects/GameRush/src/Model/Administrador.java</file>
             <file>file:/C:/Users/LABINFO-PC13/Documents/NetBeansProjects/GameRush/src/View/Cadastro.java</file>
+            <file>file:/C:/Users/LABINFO-PC13/Documents/NetBeansProjects/GameRush/src/Model/Usuario.java</file>
+            <file>file:/C:/Users/LABINFO-PC13/Documents/NetBeansProjects/GameRush/src/Model/Cliente.java</file>
+            <file>file:/C:/Users/LABINFO-PC13/Documents/NetBeansProjects/GameRush/src/META-INF/persistence.xml</file>
         </group>
     </open-files>
 </project-private>

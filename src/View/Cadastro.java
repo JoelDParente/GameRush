@@ -426,20 +426,6 @@ public class Cadastro extends javax.swing.JFrame {
     String email = inputEmail.getText();
     String telefone = inputTelefone.getText();
     String cpf = inputCpf.getText();
-
-    if (emailValido(email) && telefoneValido(telefone) && cpfFormatoValido(cpf)) {
-        Usuario novoUsuario = new Usuario(username, senha, nomeCompleto, email, cpf, telefone);
-        
-        ControlUsuario service = new ControlUsuario(); 
-        try {
-            service.cadastrarUsuario(novoUsuario);
-            JOptionPane.showMessageDialog(null, "Usuário cadastrado com sucesso:\n" + novoUsuario.toString());
-        } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, "Erro ao cadastrar usuário:\n" + e.getMessage());
-        }
-    } else {
-        JOptionPane.showMessageDialog(null, "Dados inválidos, verifique os campos.");
-    }
     }//GEN-LAST:event_btnCadastrarMouseClicked
 
     private void linkLoginMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_linkLoginMouseClicked
