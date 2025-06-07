@@ -7,7 +7,6 @@ package View;
 import Controller.ControlCompra;
 import Controller.ControlUsuario;
 import Model.Usuario;
-import ModelDAO.UsuarioDAO;
 import java.awt.Color;
 import java.util.regex.Pattern;
 import javax.swing.JOptionPane;
@@ -577,7 +576,4 @@ public class Cadastro extends javax.swing.JFrame {
     private javax.swing.JLabel msnUsername;
     // End of variables declaration//GEN-END:variables
 
-    private Object toString(UsuarioDAO novoUsuario) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
 }

@@ -4,6 +4,9 @@
  */
 package View;
 
+import java.awt.CardLayout;
+import java.awt.Color;
+
 /**
  *
  * @author LABINFO-PC13
@@ -15,7 +18,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
      */
     public TelaPrincipal() {
         initComponents();
-        jScrollPane1.getVerticalScrollBar().setUnitIncrement(80);
+        categorias.getVerticalScrollBar().setUnitIncrement(80);
     }
 
     /**
@@ -27,20 +30,18 @@ public class TelaPrincipal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jList1 = new javax.swing.JList<>();
-        jPanel6 = new javax.swing.JPanel();
         body = new javax.swing.JPanel();
         navbar = new javax.swing.JPanel();
         logoImg = new javax.swing.JLabel();
         logoText = new javax.swing.JLabel();
         caixaDePesquisa = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
         menu = new javax.swing.JPanel();
         controles = new javax.swing.JPanel();
-        Inicio = new javax.swing.JButton();
-        Biblioteca = new javax.swing.JButton();
-        Categoria = new javax.swing.JButton();
+        Iniciobtn = new javax.swing.JButton();
+        Bibliotecabtn = new javax.swing.JButton();
+        Categoriabtn = new javax.swing.JButton();
         painelFavoritos = new javax.swing.JPanel();
         favoritos = new javax.swing.JScrollPane();
         itens = new javax.swing.JList<>();
@@ -56,7 +57,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jogo7 = new javax.swing.JPanel();
         jogo8 = new javax.swing.JPanel();
         biblioteca = new javax.swing.JPanel();
-        jScrollPane2 = new javax.swing.JScrollPane();
+        categorias = new javax.swing.JScrollPane();
         pai = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
@@ -70,30 +71,40 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jPanel11 = new javax.swing.JPanel();
         jPanel12 = new javax.swing.JPanel();
         jPanel13 = new javax.swing.JPanel();
-
-        jList1.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
-        });
-        jScrollPane1.setViewportView(jList1);
-
-        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
-        jPanel6.setLayout(jPanel6Layout);
-        jPanel6Layout.setHorizontalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 421, Short.MAX_VALUE)
-        );
-        jPanel6Layout.setVerticalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 120, Short.MAX_VALUE)
-        );
+        telaDeCompra = new javax.swing.JScrollPane();
+        jogoPainel = new javax.swing.JPanel();
+        bannerGame = new javax.swing.JPanel();
+        bannerIMG = new javax.swing.JLabel();
+        jPanel15 = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
+        generoLabel = new javax.swing.JLabel();
+        avalicaoLabel = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
+        jButton2 = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        carrossel = new javax.swing.JPanel();
+        img1 = new javax.swing.JLabel();
+        img2 = new javax.swing.JLabel();
+        img3 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        TelaConta = new javax.swing.JPanel();
+        jPanel6 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMaximumSize(new java.awt.Dimension(1280, 720));
         setResizable(false);
 
         body.setBackground(new java.awt.Color(13, 17, 23));
+        body.setPreferredSize(new java.awt.Dimension(1280, 720));
 
         navbar.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(48, 54, 61), 1, true));
         navbar.setOpaque(false);
@@ -110,6 +121,10 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
         jButton1.setPreferredSize(new java.awt.Dimension(40, 40));
 
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 48)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(204, 204, 255));
+        jLabel1.setText("Bem Vindo");
+
         javax.swing.GroupLayout navbarLayout = new javax.swing.GroupLayout(navbar);
         navbar.setLayout(navbarLayout);
         navbarLayout.setHorizontalGroup(
@@ -119,6 +134,8 @@ public class TelaPrincipal extends javax.swing.JFrame {
                 .addComponent(logoImg)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(logoText)
+                .addGap(54, 54, 54)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 259, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(caixaDePesquisa, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -130,14 +147,17 @@ public class TelaPrincipal extends javax.swing.JFrame {
             .addGroup(navbarLayout.createSequentialGroup()
                 .addGap(20, 20, 20)
                 .addGroup(navbarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(logoImg)
                     .addGroup(navbarLayout.createSequentialGroup()
-                        .addGap(15, 15, 15)
+                        .addGap(3, 3, 3)
                         .addGroup(navbarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(navbarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(caixaDePesquisa, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(logoText))))
+                            .addGroup(navbarLayout.createSequentialGroup()
+                                .addGap(13, 13, 13)
+                                .addComponent(logoText)))))
                 .addContainerGap(19, Short.MAX_VALUE))
         );
 
@@ -146,28 +166,53 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
         controles.setBackground(new java.awt.Color(10, 14, 20));
 
-        Inicio.setBackground(new java.awt.Color(10, 14, 20));
-        Inicio.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
-        Inicio.setText("Inicio");
-        Inicio.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        Inicio.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-
-        Biblioteca.setBackground(new java.awt.Color(10, 14, 20));
-        Biblioteca.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
-        Biblioteca.setText("Biblioteca");
-        Biblioteca.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        Biblioteca.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        Biblioteca.addActionListener(new java.awt.event.ActionListener() {
+        Iniciobtn.setBackground(new java.awt.Color(48, 54, 61));
+        Iniciobtn.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
+        Iniciobtn.setForeground(new java.awt.Color(255, 255, 255));
+        Iniciobtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Home.png"))); // NOI18N
+        Iniciobtn.setText("Inicio");
+        Iniciobtn.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        Iniciobtn.setBorderPainted(false);
+        Iniciobtn.setFocusPainted(false);
+        Iniciobtn.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        Iniciobtn.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        Iniciobtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BibliotecaActionPerformed(evt);
+                IniciobtnActionPerformed(evt);
             }
         });
 
-        Categoria.setBackground(new java.awt.Color(10, 14, 20));
-        Categoria.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
-        Categoria.setText("Categoria");
-        Categoria.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        Categoria.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        Bibliotecabtn.setBackground(new java.awt.Color(10, 14, 20));
+        Bibliotecabtn.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
+        Bibliotecabtn.setForeground(new java.awt.Color(255, 255, 255));
+        Bibliotecabtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Biblioteca.png"))); // NOI18N
+        Bibliotecabtn.setText("Biblioteca");
+        Bibliotecabtn.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        Bibliotecabtn.setBorderPainted(false);
+        Bibliotecabtn.setFocusPainted(false);
+        Bibliotecabtn.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        Bibliotecabtn.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        Bibliotecabtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BibliotecabtnActionPerformed(evt);
+            }
+        });
+
+        Categoriabtn.setBackground(new java.awt.Color(10, 14, 20));
+        Categoriabtn.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
+        Categoriabtn.setForeground(new java.awt.Color(255, 255, 255));
+        Categoriabtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Categoria.png"))); // NOI18N
+        Categoriabtn.setText("Categoria");
+        Categoriabtn.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        Categoriabtn.setBorderPainted(false);
+        Categoriabtn.setFocusPainted(false);
+        Categoriabtn.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        Categoriabtn.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        Categoriabtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CategoriabtnActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout controlesLayout = new javax.swing.GroupLayout(controles);
         controles.setLayout(controlesLayout);
@@ -176,20 +221,20 @@ public class TelaPrincipal extends javax.swing.JFrame {
             .addGroup(controlesLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(controlesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(Inicio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(Categoria, javax.swing.GroupLayout.DEFAULT_SIZE, 224, Short.MAX_VALUE)
-                    .addComponent(Biblioteca, javax.swing.GroupLayout.DEFAULT_SIZE, 224, Short.MAX_VALUE))
+                    .addComponent(Iniciobtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(Categoriabtn, javax.swing.GroupLayout.DEFAULT_SIZE, 224, Short.MAX_VALUE)
+                    .addComponent(Bibliotecabtn, javax.swing.GroupLayout.DEFAULT_SIZE, 224, Short.MAX_VALUE))
                 .addContainerGap())
         );
         controlesLayout.setVerticalGroup(
             controlesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(controlesLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(Inicio, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(Iniciobtn, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(Biblioteca, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(Bibliotecabtn, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(Categoria, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(Categoriabtn, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -242,6 +287,8 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
         root.setBackground(new java.awt.Color(13, 17, 23));
         root.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(48, 54, 61), 1, true));
+        root.setForeground(new java.awt.Color(255, 255, 255));
+        root.setOpaque(false);
         root.setLayout(new java.awt.CardLayout());
 
         inicio.setBackground(new java.awt.Color(13, 17, 23));
@@ -394,10 +441,10 @@ public class TelaPrincipal extends javax.swing.JFrame {
                             .addGroup(inicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addComponent(jogo8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jogo3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(39, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        root.add(inicio, "card2");
+        root.add(inicio, "inicio");
 
         biblioteca.setBackground(new java.awt.Color(13, 17, 23));
         biblioteca.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(48, 54, 61), 1, true));
@@ -413,11 +460,12 @@ public class TelaPrincipal extends javax.swing.JFrame {
             .addGap(0, 598, Short.MAX_VALUE)
         );
 
-        root.add(biblioteca, "card3");
+        root.add(biblioteca, "biblioteca");
 
-        jScrollPane2.setBackground(new java.awt.Color(13, 17, 23));
-        jScrollPane2.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
-        jScrollPane2.setPreferredSize(new java.awt.Dimension(1038, 700));
+        categorias.setBackground(new java.awt.Color(13, 17, 23));
+        categorias.setBorder(null);
+        categorias.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+        categorias.setPreferredSize(new java.awt.Dimension(1038, 700));
 
         pai.setBackground(new java.awt.Color(13, 17, 23));
         pai.setPreferredSize(new java.awt.Dimension(1032, 700));
@@ -440,7 +488,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 433, Short.MAX_VALUE)
+            .addGap(0, 519, Short.MAX_VALUE)
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -451,18 +499,18 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jPanel5.setLayout(jPanel5Layout);
         jPanel5Layout.setHorizontalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 433, Short.MAX_VALUE)
+            .addGap(0, 519, Short.MAX_VALUE)
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 120, Short.MAX_VALUE)
+            .addGap(0, 159, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
         jPanel7Layout.setHorizontalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 433, Short.MAX_VALUE)
+            .addGap(0, 519, Short.MAX_VALUE)
         );
         jPanel7Layout.setVerticalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -473,7 +521,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jPanel8.setLayout(jPanel8Layout);
         jPanel8Layout.setHorizontalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 433, Short.MAX_VALUE)
+            .addGap(0, 519, Short.MAX_VALUE)
         );
         jPanel8Layout.setVerticalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -607,7 +655,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(54, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         paiLayout.setVerticalGroup(
             paiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -616,12 +664,276 @@ public class TelaPrincipal extends javax.swing.JFrame {
                 .addGroup(paiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(8, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jScrollPane2.setViewportView(pai);
+        categorias.setViewportView(pai);
 
-        root.add(jScrollPane2, "card4");
+        root.add(categorias, "categoria");
+
+        telaDeCompra.setBackground(new java.awt.Color(13, 17, 23));
+        telaDeCompra.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(48, 54, 61), 1, true));
+        telaDeCompra.setForeground(new java.awt.Color(255, 255, 255));
+        telaDeCompra.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+
+        jogoPainel.setBackground(new java.awt.Color(13, 17, 23));
+        jogoPainel.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(48, 54, 61), 1, true));
+
+        javax.swing.GroupLayout bannerGameLayout = new javax.swing.GroupLayout(bannerGame);
+        bannerGame.setLayout(bannerGameLayout);
+        bannerGameLayout.setHorizontalGroup(
+            bannerGameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(bannerIMG, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        bannerGameLayout.setVerticalGroup(
+            bannerGameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(bannerIMG, javax.swing.GroupLayout.DEFAULT_SIZE, 140, Short.MAX_VALUE)
+        );
+
+        jPanel15.setBackground(new java.awt.Color(13, 17, 23));
+        jPanel15.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(48, 54, 61), 1, true));
+
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel2.setText("Titulo");
+
+        generoLabel.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        generoLabel.setText("Gênero:");
+
+        avalicaoLabel.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        avalicaoLabel.setText("Avaliação:");
+
+        jLabel5.setText("oi");
+
+        jLabel6.setText("oi");
+
+        jTable1.setBackground(new java.awt.Color(13, 17, 23));
+        jTable1.setForeground(new java.awt.Color(255, 255, 255));
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null}
+            },
+            new String [] {
+                "Plataforma"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class
+            };
+            boolean[] canEdit = new boolean [] {
+                false
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jScrollPane2.setViewportView(jTable1);
+        if (jTable1.getColumnModel().getColumnCount() > 0) {
+            jTable1.getColumnModel().getColumn(0).setResizable(false);
+        }
+
+        jButton2.setBackground(new java.awt.Color(29, 185, 84));
+        jButton2.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jButton2.setText("Adquirir");
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pagamentos/Frame.png"))); // NOI18N
+
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pagamentos/boleto.png"))); // NOI18N
+
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pagamentos/card.png"))); // NOI18N
+
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pagamentos/gift.png"))); // NOI18N
+
+        jLabel9.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel9.setText("Fomas de Pagamento:");
+
+        jLabel10.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        jLabel10.setText("R$ ");
+
+        jLabel11.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+
+        javax.swing.GroupLayout jPanel15Layout = new javax.swing.GroupLayout(jPanel15);
+        jPanel15.setLayout(jPanel15Layout);
+        jPanel15Layout.setHorizontalGroup(
+            jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel15Layout.createSequentialGroup()
+                .addGap(26, 26, 26)
+                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel15Layout.createSequentialGroup()
+                            .addComponent(jLabel10)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(jLabel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(jLabel9, javax.swing.GroupLayout.Alignment.LEADING))
+                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 224, Short.MAX_VALUE)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel15Layout.createSequentialGroup()
+                        .addComponent(generoLabel)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel5)
+                        .addGap(60, 60, 60)
+                        .addComponent(avalicaoLabel)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel6))
+                    .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(jButton2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel15Layout.createSequentialGroup()
+                            .addComponent(jLabel3)
+                            .addGap(18, 18, 18)
+                            .addComponent(jLabel4)
+                            .addGap(18, 18, 18)
+                            .addComponent(jLabel8)
+                            .addGap(18, 18, 18)
+                            .addComponent(jLabel7))))
+                .addContainerGap(16, Short.MAX_VALUE))
+        );
+        jPanel15Layout.setVerticalGroup(
+            jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel15Layout.createSequentialGroup()
+                .addGap(14, 14, 14)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(generoLabel)
+                    .addComponent(avalicaoLabel)
+                    .addComponent(jLabel5)
+                    .addComponent(jLabel6))
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel9)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jLabel4)
+                        .addComponent(jLabel7, javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(jLabel8))
+                    .addComponent(jLabel3))
+                .addGap(18, 18, 18)
+                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+
+        jLabel12.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel12.setText("Sobre o Game:");
+
+        carrossel.setBackground(new java.awt.Color(13, 17, 23));
+
+        img1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        img1.setText("jLabel13");
+
+        img2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        img2.setText("jLabel14");
+
+        img3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        img3.setText("jLabel15");
+
+        javax.swing.GroupLayout carrosselLayout = new javax.swing.GroupLayout(carrossel);
+        carrossel.setLayout(carrosselLayout);
+        carrosselLayout.setHorizontalGroup(
+            carrosselLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(carrosselLayout.createSequentialGroup()
+                .addComponent(img1, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(57, 57, 57)
+                .addComponent(img2, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 60, Short.MAX_VALUE)
+                .addComponent(img3, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+        carrosselLayout.setVerticalGroup(
+            carrosselLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(img1, javax.swing.GroupLayout.DEFAULT_SIZE, 119, Short.MAX_VALUE)
+            .addComponent(img2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(img3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
+        jLabel13.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabel13.setText("jLabel13");
+        jLabel13.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+
+        javax.swing.GroupLayout jogoPainelLayout = new javax.swing.GroupLayout(jogoPainel);
+        jogoPainel.setLayout(jogoPainelLayout);
+        jogoPainelLayout.setHorizontalGroup(
+            jogoPainelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jogoPainelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jogoPainelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(bannerGame, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(jogoPainelLayout.createSequentialGroup()
+                        .addGap(6, 6, 6)
+                        .addGroup(jogoPainelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jogoPainelLayout.createSequentialGroup()
+                                .addComponent(jLabel12)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(jogoPainelLayout.createSequentialGroup()
+                                .addGap(0, 3, Short.MAX_VALUE)
+                                .addGroup(jogoPainelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(carrossel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jLabel13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addGap(28, 28, 28)))
+                        .addComponent(jPanel15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(20, 20, 20))
+        );
+        jogoPainelLayout.setVerticalGroup(
+            jogoPainelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jogoPainelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(bannerGame, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(jogoPainelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(jogoPainelLayout.createSequentialGroup()
+                        .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(carrossel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(80, 80, 80)
+                        .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jPanel15, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(82, Short.MAX_VALUE))
+        );
+
+        telaDeCompra.setViewportView(jogoPainel);
+
+        root.add(telaDeCompra, "telaDeCompra");
+
+        TelaConta.setBackground(new java.awt.Color(13, 17, 23));
+
+        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
+        jPanel6.setLayout(jPanel6Layout);
+        jPanel6Layout.setHorizontalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 950, Short.MAX_VALUE)
+        );
+        jPanel6Layout.setVerticalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 500, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout TelaContaLayout = new javax.swing.GroupLayout(TelaConta);
+        TelaConta.setLayout(TelaContaLayout);
+        TelaContaLayout.setHorizontalGroup(
+            TelaContaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(TelaContaLayout.createSequentialGroup()
+                .addGap(44, 44, 44)
+                .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(44, Short.MAX_VALUE))
+        );
+        TelaContaLayout.setVerticalGroup(
+            TelaContaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(TelaContaLayout.createSequentialGroup()
+                .addGap(50, 50, 50)
+                .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(50, Short.MAX_VALUE))
+        );
+
+        root.add(TelaConta, "card6");
 
         javax.swing.GroupLayout bodyLayout = new javax.swing.GroupLayout(body);
         body.setLayout(bodyLayout);
@@ -653,7 +965,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(body, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(body, javax.swing.GroupLayout.DEFAULT_SIZE, 1308, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -663,9 +975,29 @@ public class TelaPrincipal extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void BibliotecaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BibliotecaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_BibliotecaActionPerformed
+    private void BibliotecabtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BibliotecabtnActionPerformed
+        CardLayout cl = (CardLayout) root.getLayout();
+        cl.show(root, "biblioteca");
+        Bibliotecabtn.setBackground(new Color(48,54,61));
+        Iniciobtn.setBackground(new Color(10,14,20));
+        Categoriabtn.setBackground(new Color(10,14,20));
+    }//GEN-LAST:event_BibliotecabtnActionPerformed
+
+    private void IniciobtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IniciobtnActionPerformed
+        CardLayout cl = (CardLayout) root.getLayout();
+        cl.show(root, "inicio");
+        Bibliotecabtn.setBackground(new Color(10,14,20));
+        Iniciobtn.setBackground(new Color(48,54,61));
+        Categoriabtn.setBackground(new Color(10,14,20));
+    }//GEN-LAST:event_IniciobtnActionPerformed
+
+    private void CategoriabtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CategoriabtnActionPerformed
+        CardLayout cl = (CardLayout) root.getLayout();
+        cl.show(root, "categoria");
+        Bibliotecabtn.setBackground(new Color(10,14,20));
+        Iniciobtn.setBackground(new Color(10,14,20));
+        Categoriabtn.setBackground(new Color(48,54,61));
+    }//GEN-LAST:event_CategoriabtnActionPerformed
 
     /**
      * @param args the command line arguments
@@ -703,24 +1035,48 @@ public class TelaPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton Biblioteca;
-    private javax.swing.JButton Categoria;
-    private javax.swing.JButton Inicio;
+    private javax.swing.JButton Bibliotecabtn;
+    private javax.swing.JButton Categoriabtn;
+    private javax.swing.JButton Iniciobtn;
+    private javax.swing.JPanel TelaConta;
+    private javax.swing.JLabel avalicaoLabel;
     private javax.swing.JPanel banner;
+    private javax.swing.JPanel bannerGame;
+    private javax.swing.JLabel bannerIMG;
     private javax.swing.JPanel biblioteca;
     private javax.swing.JPanel body;
     private javax.swing.JTextField caixaDePesquisa;
+    private javax.swing.JPanel carrossel;
+    private javax.swing.JScrollPane categorias;
     private javax.swing.JPanel controles;
     private javax.swing.JScrollPane favoritos;
+    private javax.swing.JLabel generoLabel;
+    private javax.swing.JLabel img1;
+    private javax.swing.JLabel img2;
+    private javax.swing.JLabel img3;
     private javax.swing.JPanel inicio;
     private javax.swing.JList<String> itens;
     private javax.swing.JButton jButton1;
-    private javax.swing.JList<String> jList1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;
     private javax.swing.JPanel jPanel12;
     private javax.swing.JPanel jPanel13;
+    private javax.swing.JPanel jPanel15;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
@@ -729,8 +1085,8 @@ public class TelaPrincipal extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
-    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JTable jTable1;
     private javax.swing.JPanel jogo1;
     private javax.swing.JPanel jogo2;
     private javax.swing.JPanel jogo3;
@@ -739,6 +1095,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
     private javax.swing.JPanel jogo6;
     private javax.swing.JPanel jogo7;
     private javax.swing.JPanel jogo8;
+    private javax.swing.JPanel jogoPainel;
     private javax.swing.JLabel logoImg;
     private javax.swing.JLabel logoText;
     private javax.swing.JPanel menu;
@@ -746,5 +1103,6 @@ public class TelaPrincipal extends javax.swing.JFrame {
     private javax.swing.JPanel pai;
     private javax.swing.JPanel painelFavoritos;
     private javax.swing.JPanel root;
+    private javax.swing.JScrollPane telaDeCompra;
     // End of variables declaration//GEN-END:variables
 }
