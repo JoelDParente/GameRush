@@ -11,4 +11,8 @@ public class Administrador extends Usuario{
         this.senhaExtra = senhaExtra;
     }
     
+    public boolean validarSenhaMestre(String senhaInformada) {
+        return "admin".equals(senhaInformada);
+    }
+    
 }
